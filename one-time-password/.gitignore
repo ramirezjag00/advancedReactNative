@@ -63,3 +63,6 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# private-credentials for service-client GOOGLE CLOUD
+service_accounts.json
