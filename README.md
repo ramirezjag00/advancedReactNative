@@ -16,4 +16,4 @@
 
 - npm install
 
-- `npm start` and click `Run on IOS simulator` on browser OR expo ios / expo android (considering you have an open simulator/emulator)
+- `npm start` and click `Run on IOS simulator` / `Run on Android device/emulator` on browser OR `expo ios` / `expo android` (considering you have an open simulator/emulator) OR scan the QR after starting the project using `EXPO APP` on your device
