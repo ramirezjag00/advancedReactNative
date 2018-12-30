@@ -1,9 +1,9 @@
 const admin = require('firebase-admin');
 const functions = require('firebase-functions');
 const createUser = require('./create_user');
-const serviceAccount = require('./service-account.json');
+const serviceAccount = require('./service_accounts.json');
 
-// use admin to access our data within our function/s
+// use admin to access our service account
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://one-time-password-797c6.firebaseio.com"
