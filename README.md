@@ -4,7 +4,7 @@
 
 ### DESCRIPTION:
 
-- projects are refactored to work on latest react version
+- projects are refactored to work on latest react version and contains comments that'll serve as description for some code blocks
 
 - react-native advanced concepts using [EXPO, react-native (Animated, PanResponder, LayoutAnimation)]
 
