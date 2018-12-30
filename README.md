@@ -4,6 +4,8 @@
 
 ### DESCRIPTION:
 
+- projects are refactored to work on latest react version
+
 - react-native advanced concepts using [EXPO, react-native (Animated, PanResponder, LayoutAnimation)]
 
 - used `expo init` to create project
