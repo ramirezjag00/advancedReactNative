@@ -66,3 +66,6 @@ node_modules/
 
 # private-credentials for service-client GOOGLE CLOUD
 service_accounts.json
+
+# private-credentials for PROMOTEXTER
+promotexter.js
