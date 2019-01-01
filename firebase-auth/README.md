@@ -6,13 +6,13 @@
 
 - axios
 
-- EXPO
+- firebase
+
+- EXPO (used `expo init` to create project)
 
 - react-native-elements
 
-- es2017(try-catch, async-await, state initialization, helper function (without binding))
-
-- used `expo init` to create project
+- es2017 (try-catch, async-await, state initialization, helper function (without binding))
 
 #### TO START:
 
