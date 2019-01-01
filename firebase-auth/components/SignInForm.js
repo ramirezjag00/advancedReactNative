@@ -19,6 +19,7 @@ class SignInForm extends Component {
   state = {
     phone: '',
     code: '',
+    token: '',
   };
 
   // ES2017
@@ -26,7 +27,8 @@ class SignInForm extends Component {
   handleSubmit = async () => {
     const { phone, code } = this.state;
     try {
-      await axios.post(`${ROOT_URL}/verifyOneTimePassword`, { phone, code });
+      let res = await axios.post(`${ROOT_URL}/verifyOneTimePassword`, { phone, code });
+      this.setState({ token: res.data.token });
     } catch (err) {
       console.log(err);
     }
