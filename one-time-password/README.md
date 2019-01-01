@@ -1,4 +1,4 @@
-# ONE TIME PASSWORD (Google Cloud Functions - SERVERLESS) for Firebase-Auth App (REACT-NATIVE PROJECT)
+# ONE TIME PASSWORD (Google Cloud Functions - SERVERLESS) for [Firebase-Auth App (REACT-NATIVE PROJECT)](https://github.com/ramirezjag00/advancedReactNative/tree/master/firebase-auth)
 
 - this project consists for three functions: first is to create a user that'll be saved in the firebase database, second is to request one time password (4-digit code) that'll be saved into the database and be sent via sms using Promotexter API (since Twilio doesn't have free sms in Philippines if you're using trial account), third is to compare the code submitted by user and code in database then send token to allow user to be logged in or authenticated.
 
