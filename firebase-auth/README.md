@@ -1,14 +1,16 @@
-# SWIPE React-Native
+# FIREBASE-AUTH React-Native
 
-- an app that features animated cards that react from user gestures like `Tinder` using react-native components
+- a basic log-in and sign-up app that uses ONE TIME PASSWORD (Google Cloud Functions)
 
 ### DESCRIPTION:
 
-- react-native advanced concepts using Animated, PanResponder, LayoutAnimation
+- axios
 
 - EXPO
 
 - react-native-elements
+
+- es2017(try-catch, async-await, state initialization, helper function (without binding))
 
 - used `expo init` to create project
 
