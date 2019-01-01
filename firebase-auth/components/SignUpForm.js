@@ -10,13 +10,14 @@ import {
 } from 'react-native-elements';
 import axios from 'axios';
 
+// place this on .env file
 const ROOT_URL = 'https://us-central1-one-time-password-797c6.cloudfunctions.net';
 
 class SignUpForm extends Component {
   // ES2017
   // no need for constructor since we won't be doing anything from there except for initializing a state
   state = {
-    phone: '';
+    phone: '',
   };
 
   // ES2017
@@ -40,6 +41,7 @@ class SignUpForm extends Component {
         <View style={{ marginBottom: 10 }}>
           <FormLabel>Enter Phone Number</FormLabel>
           <FormInput
+            placeholder="639XXXXXXXXX"
             value={phone}
             onChangeText={phone => this.setState({ phone })}
           />
