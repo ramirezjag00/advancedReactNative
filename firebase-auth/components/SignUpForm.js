@@ -21,16 +21,15 @@ class SignUpForm extends Component {
 
   // ES2017
   // no need to do this.handle.bind(this) since the arrow function handles it
-  handleSubmit = () => {
+  handleSubmit = async () => {
     const { phone } = this.state;
+    try {
+      await axios.post(`${ROOT_URL}/createUser`, { phone });
+      await axios.post(`${ROOT_URL}/requestOneTimePassword`, { phone });
+    } catch (err) {
+      console.log(err);
+    }
 
-    axios.post(`${ROOT_URL}/createUser`, {
-      phone,
-    }).then( => {
-      axios.post(`${ROOT_URL}/requestOneTimePassword`, {
-        phone
-      })
-    })
   }
 
   render() {
