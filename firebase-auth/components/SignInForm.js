@@ -51,7 +51,7 @@ class SignInForm extends Component {
           <FormInput
             placeholder="XXXX"
             value={code}
-            onChangeText={phone => this.setState({ code })}
+            onChangeText={code => this.setState({ code })}
           />
         </View>
         <Button onPress={this.handleSubmit} title="Submit" />
