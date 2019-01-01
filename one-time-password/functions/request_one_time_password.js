@@ -32,6 +32,7 @@ module.exports = (req, res) => {
         json: true
       };
 
+      // use request-promise for HTTP REQUEST while inside google cloud functions
       rp(options)
         .then(user => {
             return res.send("SUCCESS");
@@ -41,26 +42,13 @@ module.exports = (req, res) => {
             return res.status(422).send(err);
           }
         });
-      // request.post(
-      //   host,
-      //   {
-      //     apiKey,
-      //     apiSecret,
-      //     from,
-      //     to: phone,
-      //     text
-      //   },
-      //   (err, response, body) => {
-      //    if (err) {
-      //      return res.status(422).send(err);
-      //    }
 
+        // find user in database and update record with code and codeValid properties
        admin.database().ref('users/' + phone)
         .update({ code: code, codeValid: true }, () => {
           res.send({ success: true });
         })
-      // });
-      return res.send({ userRecord, code, from, to: phone  });
+      return res.send({ userRecord, code  });
     })
     .catch(err => {
       res.status(422).send({ error: err });
