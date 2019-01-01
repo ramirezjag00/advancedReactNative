@@ -8,6 +8,9 @@ import {
   FormInput,
   Button,
 } from 'react-native-elements';
+import axios from 'axios';
+
+const ROOT_URL = 'https://us-central1-one-time-password-797c6.cloudfunctions.net';
 
 class SignUpForm extends Component {
   // ES2017
@@ -19,7 +22,15 @@ class SignUpForm extends Component {
   // ES2017
   // no need to do this.handle.bind(this) since the arrow function handles it
   handleSubmit = () => {
+    const { phone } = this.state;
 
+    axios.post(`${ROOT_URL}/createUser`, {
+      phone,
+    }).then( => {
+      axios.post(`${ROOT_URL}/requestOneTimePassword`, {
+        phone
+      })
+    })
   }
 
   render() {
