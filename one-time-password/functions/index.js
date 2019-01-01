@@ -4,6 +4,7 @@ const createUser = require('./create_user');
 const serviceAccount = require('./service_accounts.json');
 const promotexter = require('./promotexter');
 const requireOneTimePassword = require('./request_one_time_password');
+const verifyOneTimePassword = require('./verify_one_time_password');
 
 // use admin to access our service account
 admin.initializeApp({
@@ -21,3 +22,4 @@ admin.initializeApp({
 // create a function `createUser` and set it up using the createUser function that has been imported
 exports.createUser = functions.https.onRequest(createUser);
 exports.requireOneTimePassword = functions.https.onRequest(requireOneTimePassword);
+exports.verifyOneTimePassword = functions.https.onRequest(verifyOneTimePassword);
