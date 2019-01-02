@@ -1,6 +1,6 @@
 # FIREBASE-AUTH React-Native
 
-- a basic log-in and sign-up app that uses ONE TIME PASSWORD (Google Cloud Functions)
+- a basic log-in and sign-up app that uses [ONE TIME PASSWORD (Google Cloud Functions)](https://github.com/ramirezjag00/advancedReactNative/tree/master/one-time-password)
 
 ### DESCRIPTION:
 

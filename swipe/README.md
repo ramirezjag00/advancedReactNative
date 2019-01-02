@@ -1,16 +1,14 @@
 # SWIPE React-Native
 
-- an app that features animated cards that react from user gestures like `Tinder` using react-native components
+- an app that features animated cards that react from user gestures like `Tinder`
 
 ### DESCRIPTION:
 
-- react-native advanced concepts using Animated, PanResponder, LayoutAnimation
+- react-native advanced concepts: Animated, PanResponder, LayoutAnimation
 
-- EXPO
+- EXPO (used `expo init` to create project)
 
 - react-native-elements
-
-- used `expo init` to create project
 
 #### TO START:
 
