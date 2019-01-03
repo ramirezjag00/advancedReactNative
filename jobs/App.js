@@ -14,6 +14,10 @@ export default class App extends React.Component {
     const TabNavigator = createAppContainer(createBottomTabNavigator({
       Welcome: WelcomeScreen,
       Auth: AuthScreen,
+      Main: createBottomTabNavigator({
+        Map: MapScreen,
+        Deck: DeckScreen,
+      })
     }));
 
     return (
