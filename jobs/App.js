@@ -1,6 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { createBottomTabNavigator, createAppContainer } from 'react-navigation';
+import {
+  createBottomTabNavigator,
+  createAppContainer,
+  createStackNavigator,
+} from 'react-navigation';
 
 import AuthScreen from './screens/AuthScreen';
 import DeckScreen from './screens/DeckScreen';
@@ -11,12 +15,18 @@ import WelcomeScreen from './screens/WelcomeScreen';
 
 export default class App extends React.Component {
   render() {
+    const ReviewStack = createStackNavigator({
+      Review: ReviewScreen,
+      Settings: SettingsScreen,
+    });
+
     const TabNavigator = createAppContainer(createBottomTabNavigator({
       Welcome: WelcomeScreen,
       Auth: AuthScreen,
       Main: createBottomTabNavigator({
         Map: MapScreen,
         Deck: DeckScreen,
+        Review: ReviewStack,
       })
     }));
 
