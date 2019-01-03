@@ -1,11 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import AuthScreen from './screens/AuthScreen';
+import DeckScreen from './screens/DeckScreen';
+import MapScreen from './screens/MapScreen';
+import ReviewScreen from './screens/ReviewScreen';
+import SettingsScreen from './screens/SettingsScreen';
+import WelcomeScreen from './screens/WelcomeScreen';
+
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+
       </View>
     );
   }
