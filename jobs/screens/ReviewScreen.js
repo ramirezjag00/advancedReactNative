@@ -5,6 +5,10 @@ import {
 } from 'react-native';
 
 class ReviewScreen extends Component {
+  static navigationOptions = {
+    title: 'Review Jobs',
+  };
+
   render() {
     return (
       <View>
