@@ -12,8 +12,8 @@ import WelcomeScreen from './screens/WelcomeScreen';
 export default class App extends React.Component {
   render() {
     const TabNavigator = createAppContainer(createBottomTabNavigator({
-      Welcome: { screen: WelcomeScreen },
-      Auth: { screen: AuthScreen },
+      Welcome: WelcomeScreen,
+      Auth: AuthScreen,
     }));
 
     return (
