@@ -2,11 +2,21 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
+  Button
 } from 'react-native';
 
 class ReviewScreen extends Component {
-  static navigationOptions = {
-    title: 'Review Jobs',
+  static navigationOptions = () => {
+    return {
+      headerTitle: 'Review Jobs',
+      headerRight: (
+        <Button
+          // onPress={navigation.getParam('increaseCount')}
+          title="Right"
+          color="#000"
+        />
+      ),
+    }
   };
 
   render() {
