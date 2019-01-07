@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {
   View,
   Text,
+  Platform,
 } from 'react-native';
 import {
   Button
@@ -15,8 +16,13 @@ class ReviewScreen extends Component {
         <Button
           title="Settings"
           onPress={() => {navigation.navigate('Settings')}}
+          backgroundColor="rgba(0,0,0,0)"
+          color="rgba(0,112,255,1)"
         />
       ),
+      headerStyle: {
+        marginTop: Platform.OS === 'android' ? 24 : 0
+      }
     }
   };
 
