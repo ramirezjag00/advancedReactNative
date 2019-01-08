@@ -13,7 +13,7 @@ class Slides extends Component {
     const { data } = this.props;
     return data.map(slide => {
       return (
-        <View key={slide.text} style={styles.slideContainer}>
+        <View key={slide.text} style={[styles.slideContainer, { backgroundColor: slide.color }]}>
           <Text style={styles.slideText}>{slide.text}</Text>
         </View>
       );
@@ -25,7 +25,6 @@ class Slides extends Component {
       <ScrollView
         horizontal
         pagingEnabled
-        showsHorizontalScrollIndicator
         style={{ flex: 1 }}
       >
         {this.renderSlides()}
@@ -37,6 +36,7 @@ class Slides extends Component {
 const styles = {
   slideText: {
     fontSize: 30,
+    color: '#ffffff'
   },
   slideContainer: {
     flex: 1,
