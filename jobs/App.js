@@ -20,19 +20,24 @@ export default class App extends React.Component {
       Settings: SettingsScreen,
     });
 
-    const TabNavigator = createAppContainer(createBottomTabNavigator({
+    const TabNavigator = createBottomTabNavigator({
+      Map: MapScreen,
+      Deck: DeckScreen,
+      Review: ReviewStack,
+    });
+
+    const RootNavigator = createAppContainer(createStackNavigator({
       Welcome: WelcomeScreen,
       Auth: AuthScreen,
-      Main: createBottomTabNavigator({
-        Map: MapScreen,
-        Deck: DeckScreen,
-        Review: ReviewStack,
-      })
+      Tab: TabNavigator,
+    },{
+      mode: 'modal',
+      headerMode: 'none'
     }));
 
     return (
       <View style={styles.container}>
-        <TabNavigator />
+        <RootNavigator />
       </View>
     );
   }
