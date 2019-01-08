@@ -8,13 +8,17 @@ import Slides from '../components/Slides';
 const SLIDE_DATA = [
   { text: 'Welcome to Job App', color: '#03A9F4' },
   { text: 'Use this to get a job', color: '#009688' },
-  { text: 'Set location and swipe away', color: '#03A9F4' },
+  { text: 'Set your location, then swipe away', color: '#03A9F4' },
 ];
 
 class WelcomeScreen extends Component {
+  onSlidesComplete = () => {
+    this.props.navigation.navigate('Auth');
+  }
+
   render() {
     return (
-      <Slides data={SLIDE_DATA} />
+      <Slides data={SLIDE_DATA} onComplete={this.onSlidesComplete} />
     );
   }
 }
