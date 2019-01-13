@@ -5,6 +5,7 @@ import {
   createAppContainer,
   createStackNavigator,
 } from 'react-navigation';
+import { Provider } from 'react-redux';
 
 import AuthScreen from './screens/AuthScreen';
 import DeckScreen from './screens/DeckScreen';
