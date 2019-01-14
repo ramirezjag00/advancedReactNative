@@ -23,7 +23,7 @@ export const facebookLogin = () => async dispatch => {
   }
 }
 
-cosnt handleFacebookLogin = async dispatch => {
+const handleFacebookLogin = async dispatch => {
   let { type, token } = await Facebook.logInWithReadPermissionsAsync('290094984983909', {
     permissions: ['public_profile']
   });
@@ -32,6 +32,6 @@ cosnt handleFacebookLogin = async dispatch => {
     return dispatch({ type: FACEBOOK_LOGIN_FAIL });
   }
 
-  AsyncStorage.setItem('fb_token', token);
+  await AsyncStorage.setItem('fb_token', token);
   dispatch({ type: FACEBOOK_LOGIN_SUCCESS, payload: token });
 };
