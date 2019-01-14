@@ -34,7 +34,8 @@ export default class App extends React.Component {
       Tab: TabNavigator,
     },{
       mode: 'modal',
-      headerMode: 'none'
+      headerMode: 'none',
+      lazy: true
     }));
 
     return (
