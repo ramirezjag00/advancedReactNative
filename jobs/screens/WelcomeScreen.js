@@ -1,8 +1,11 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import {
   View,
   Text,
+  AsyncStorage,
 } from 'react-native';
+import { AppLoading } from 'expo';
 import Slides from '../components/Slides';
 
 const SLIDE_DATA = [
@@ -12,11 +15,36 @@ const SLIDE_DATA = [
 ];
 
 class WelcomeScreen extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      token: null,
+    }
+
+    this.handleFbToken();
+  }
+
+  async handleFbToken = () => {
+    let token = await AsyncStorage.getItem('fb_token');
+
+    if (token) {
+      this.props.navigation.navigate('Map');
+    } else {
+      this.setState({ token: false });
+    }
+  }
+
   onSlidesComplete = () => {
     this.props.navigation.navigate('Auth');
   }
 
   render() {
+    const { token } = this.state;
+    if (_.isNull(token)) {
+      return <AppLoading />;
+    }
+
     return (
       <Slides data={SLIDE_DATA} onComplete={this.onSlidesComplete} />
     );
