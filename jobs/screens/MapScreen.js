@@ -14,8 +14,8 @@ class MapScreen extends Component {
   state = {
     mapLoaded: false,
     region: {
-      longitude: -122,
-      latitude: 37,
+      longitude: 121.0244,
+      latitude: 14.5547,
       //xxxDelta indicates the zoom state of the long, lat
       longitudeDelta: 0.04,
       latitudeDelta: 0.09,
