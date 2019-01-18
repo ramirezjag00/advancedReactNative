@@ -10,9 +10,8 @@ class MapScreen extends Component {
   state = {
     mapLoaded: false,
     region: {
-      // Makati long, lat from www.google.com.ph
-      longitude: 121.0244,
-      latitude: 14.5547,
+      longitude: -122,
+      latitude: 37,
       //xxxDelta indicates the zoom state of the long, lat
       longitudeDelta: 0.04,
       latitudeDelta: 0.09,
