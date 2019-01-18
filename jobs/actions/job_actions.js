@@ -21,7 +21,7 @@ const JOB_QUERY_PARAMS =  {
 };
 
 const buildJobsUrl = (zip) => {
-  const query = qs.stringify({ ...JOB_QUERY_PARAMS, l: zip };
+  const query = qs.stringify({ ...JOB_QUERY_PARAMS, l: zip });
   return `${JOB_ROOT_URL}${query}`
 };
 
