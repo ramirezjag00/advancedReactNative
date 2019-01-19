@@ -6,6 +6,8 @@ import {
 import reverseGeocode from 'latlng-to-zip';
 import qs from 'qs';
 
+import results from './results';
+
 const JOB_ROOT_URL = 'http://api.indeed.com/ads/apisearch?';
 
 const JOB_QUERY_PARAMS =  {
@@ -27,11 +29,13 @@ const buildJobsUrl = (zip) => {
 
 export const fetchJobs = (region) => async (dispatch) => {
   try {
-    let zip = await reverseGeocode(region);
-    const url = buildJobsUrl(zip);
-    let { data } = await axios.get(url);
+    // let zip = await reverseGeocode(region);
+    // const url = buildJobsUrl(zip);
+    // let { data } = await axios.get(url);
+    // will use this mock data since indeed api didn't allow us access
+    let data = {};
+    data["results"] = results;
     dispatch({ type: FETCH_JOBS, payload: data });
-    console.log(data);
   } catch (err) {
     console.log(err);
   }
