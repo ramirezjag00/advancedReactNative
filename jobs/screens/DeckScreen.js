@@ -3,15 +3,21 @@ import {
   View,
   Text,
 } from 'react-native';
+import { connect } from 'react-redux';
 
 class DeckScreen extends Component {
   render() {
     return (
       <View>
-        <Text>DeckScreen</Text>
+        <Text>{this.props.jobs[0].jobtitle}</Text>
       </View>
     );
   }
 }
 
-export default DeckScreen;
+// destructuring state.jobs from combineReducers
+function mapStateToProps({jobs}) {
+  return { jobs: jobs.results };
+}
+
+export default connect(mapStateToProps)(DeckScreen);
