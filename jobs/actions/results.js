@@ -1,6 +1,7 @@
 const results = [
   {
-    jobtitle: "Junior Java Developer",
+    jobTitle: "Junior Java Developer",
+    description: "A Java developer is responsible for many duties throughout the development lifecycle of applications, from concept and design right through to testing.",
     company: "Pragmatics, Inc.",
     city: "Austin",
     state: "TX",
@@ -15,7 +16,8 @@ const results = [
     expired: false,
   },
   {
-    jobtitle: "Senior Java Developer",
+    jobTitle: "Senior Java Developer",
+    description: "A Java developer is responsible for many duties throughout the development lifecycle of applications, from concept and design right through to testing.",
     company: "Pragmaticsssss, Inc.",
     city: "Austin",
     state: "TXS",
@@ -30,7 +32,8 @@ const results = [
     expired: false,
   },
   {
-    jobtitle: "Mid Java Developer",
+    jobTitle: "Mid Java Developer",
+    description: "A Java developer is responsible for many duties throughout the development lifecycle of applications, from concept and design right through to testing.",
     company: "PewPew, Inc.",
     city: "Austin",
     state: "TXSSS",
