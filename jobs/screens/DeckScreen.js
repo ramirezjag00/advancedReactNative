@@ -29,7 +29,7 @@ class DeckScreen extends Component {
           <Text>{job.company}</Text>
           <Text>{job.formattedRelativeTime}</Text>
         </View>
-        <Text>{job.snippet}</Text>
+        <Text numberOfLines={5} style={{ height: 60 }}>{job.snippet}</Text>
       </Card>
     );
   }
