@@ -43,11 +43,11 @@ class Swipe extends Component {
     this.state = { panResponder, position, index: 0 };
   }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.data !== prevState.data) {
-      return ({ index: 0 })
-    }
-  }
+  // static getDerivedStateFromProps(nextProps, prevState) {
+  //   if (nextProps.data !== prevState.data) {
+  //     return ({ index: 0 })
+  //   }
+  // }
 
   componentDidUpdate() {
     UIManager.setLayoutAnimationEnabledExperimental && UIManager.setLayoutAnimationEnabledExperimental(true);
